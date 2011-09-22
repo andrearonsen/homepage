@@ -1,0 +1,78 @@
+html, body, * {
+  margin: 0;
+  padding: 0;
+  font-family: 'Vollkorn', Georgia, Times, serif;
+	font-size: 16px;
+	line-height: 25px;
+} 
+
+h1 {
+	font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+	font-size: 25px;
+	line-height: 33px;
+}
+
+header {
+  position: absolute; 
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100px;
+  background: #4A4A4A;
+  color: white; 
+  padding-top: 20px;
+}
+
+header > * {
+  text-align: center;
+}
+
+header blockquote {
+  color: #A3CD39; 
+  font-size: 14px;
+	line-height: 22px;
+}
+
+#main {
+  background: #F43E71;
+  position: absolute;
+  left: 0;
+  right: 25%; 
+  top: 100px;
+  bottom: 0;
+} 
+
+aside {
+  background: #E2DC7C;
+  font-size: .9em;
+  position: absolute;
+  right: 0;
+  top: 100px;
+  bottom: 0;
+  width: 25%;
+} 
+
+@media screen and (min-width: 800px) {
+  header {
+    height: 180px; 
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  #main, aside {
+    top: 180px;
+  }
+  
+  h1 {
+    font-size: 50px;
+  	line-height: 65px;
+  } 
+  
+  header blockquote {
+    font-size: 25px;
+  	line-height: 33px;
+  }
+  
+}
+
+
