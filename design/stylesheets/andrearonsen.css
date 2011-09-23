@@ -1,4 +1,4 @@
-html, body, * {
+html, body, header, * {
   margin: 0;
   padding: 0;
   font-family: 'Vollkorn', Georgia, Times, serif;
@@ -10,6 +10,20 @@ h1 {
 	font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
 	font-size: 25px;
 	line-height: 33px;
+} 
+
+li {
+  list-style-type: none;
+} 
+
+a, a:link, a:visited {
+  color: #F43E71;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #A3CD39;  
 }
 
 header {
@@ -20,7 +34,10 @@ header {
   height: 100px;
   background: #4A4A4A;
   color: white; 
-  padding-top: 20px;
+}
+
+#headline {
+    padding-top: 20px;
 }
 
 header > * {
@@ -29,32 +46,95 @@ header > * {
 
 header blockquote {
   color: #A3CD39; 
-  font-size: 14px;
-	line-height: 22px;
+  font-size: 12px;
+	line-height: 20px;
 }
 
 #main {
-  background: #F43E71;
   position: absolute;
   left: 0;
-  right: 25%; 
+  right: 20%; 
   top: 100px;
   bottom: 0;
+  padding: 10px;
 } 
 
 aside {
-  background: #E2DC7C;
   font-size: .9em;
   position: absolute;
   right: 0;
   top: 100px;
   bottom: 0;
-  width: 25%;
+  width: 20%;  
 } 
+
+aside > * {
+    padding: 10px 0 0 30%;
+}
+
+aside ul a {
+  background: 0 100% no-repeat; 
+  display: block; 
+  padding: 10px 0 0 0; 
+} 
+
+aside ul a[href*="twitter"] {
+  background-image: url(../images/socialmedia/small/twitter.png);
+}
+
+aside ul a[href*="linkedin"] {
+  background-image: url(../images/socialmedia/small/linkedin.png);
+} 
+
+aside ul a[href*="google"] {
+  background-image: url(../images/socialmedia/small/google.png);
+}
+
+aside ul a[href*="facebook"] {
+  background-image: url(../images/socialmedia/small/facebook.png);
+} 
+
+aside ul a[href*="github"] {
+  background-image: url(../images/socialmedia/small/github.png);
+}
+
+aside ul a span {
+  visibility: hidden;
+}
+
+#githubBanner {
+  display: none;
+} 
+
+#githubBanner img {
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  border: 0;
+}
+
+#tweetsContainer {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 15px;
+  background: rgba(244, 62, 113, 0.1);
+}
+
+dt, dd {
+  display: inline;
+}
+
+#disqusSection {
+  display: none;
+}
 
 @media screen and (min-width: 800px) {
   header {
     height: 180px; 
+  } 
+  
+  #headline {
     padding-top: 40px;
     padding-bottom: 40px;
   }
@@ -71,8 +151,53 @@ aside {
   header blockquote {
     font-size: 25px;
   	line-height: 33px;
+  } 
+  
+  aside > * {
+      padding: 24px 0 0 10%;
   }
   
+  aside ul a {
+    padding: 24px 0 24px 64px;
+  }
+  
+  aside ul a[href*="twitter"] {
+    background-image: url(../images/socialmedia/big/twitter.png);
+  } 
+  
+  aside ul a[href*="linkedin"] {
+    background-image: url(../images/socialmedia/big/linkedin.png);
+  } 
+  
+  aside ul a[href*="google"] {
+    background-image: url(../images/socialmedia/big/google.png);
+  } 
+  
+  aside ul a[href*="facebook"] {
+    background-image: url(../images/socialmedia/big/facebook.png);
+  } 
+  
+  aside ul a[href*="github"] {
+    background-image: url(../images/socialmedia/big/github.png);
+  }
+  
+  aside ul a span {
+    visibility: visible;
+  }
+  
+  #disqusSection {
+    display: block;
+  }
+  
+  #githubBanner { 
+    display: inline;
+  }  
+}  
+
+@media screen and (min-width: 1600px) {
+  header {
+    background: #4A4A4A url(../images/lambda.png) 5px 10px no-repeat; 
+  }
 }
 
 
