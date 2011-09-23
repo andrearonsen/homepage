@@ -92,9 +92,13 @@
     <meta name="viewport" content="width=device-width" />
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:bold' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'> 
-    <link rel="stylesheet" href="design/stylesheets/andrearonsen.css" />
+    <link rel="stylesheet" href="design/stylesheets/andrearonsen.css" /> 
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+      {parsetags: 'explicit'}
+    </script>
     <script type="text/javascript" src="javascript/jquery-1.6.4.min.js"></script> 
     <script type='text/javascript' async='true' src='http://andrearonsen.disqus.com/embed.js'></script>
+    <script type="text/javascript" src="javascript/twitterwidgets.js"></script> 
     <script type="text/javascript" src="javascript/main.js"></script>
   </head>
   
@@ -109,12 +113,16 @@
     <div id="content">
       <section id="main">
         <article> 
-          This site is currently under construction...
+          This site is currently under construction... 
+          
+          <p><div class="g-plusone"></div></p>
         </article>
         
         <article>
           <h4>My latest tweets</h4>
-          <div id="tweetsContainer"/>
+          <div id="tweetsContainer">
+            <a href="https://twitter.com/andrearonsen" class="twitter-follow-button" data-show-count="false">Follow @andrearonsen</a>
+          </div>
         </article>
         
         <section id="disqusSection">
@@ -152,7 +160,8 @@
     
     <script type="text/javascript">
         jQuery(document).ready(function (){
-          ANDRE.social.displayTweets(jQuery('#tweetsContainer'));
+          ANDRE.social.displayTweets(jQuery('#tweetsContainer')); 
+          gapi.plusone.go();
         });
     </script>
   </body>

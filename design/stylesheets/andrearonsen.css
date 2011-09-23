@@ -183,6 +183,7 @@ dt, dd {
   
   aside ul a span {
     visibility: visible;
+    padding-left: 10px;
   }
   
   #disqusSection {
